@@ -4,12 +4,13 @@ body{
 }
 
 @font-face {
-    font-family: 'Avenir';
-    src: url('./css/AvenirLTStd-Book.eot') format('eot'),
+    font-family: 'AvenirLTStd-Book';
+    src: local('AvenirLTStd-Book'), url('./css/AvenirLTStd-Book.eot') format('eot'),
     url('./css/AvenirLTStd-Book.otf') format('truetype'),
     url('./css/AvenirLTStd-Book.ttf') format('truetype'),
     url('./css/AvenirLTStd-Book.woff') format('woff'),
     url('./css/AvenirLTStd-Book.woff2') format('woff2');
+    src: url('./css/AvenirLTStd-Book.eot?') format('eot')
 }
 
 .download {
