@@ -5,7 +5,8 @@ body{
 
 @font-face {
     font-family: "Avenir";
-    src: url("/css/AvenirLTStd-Book.otf") format("truetype");
+    src: url("/css/AvenirLTStd-Book.eot") format("eot");
+    src: url("/css/AvenirLTStd-Book.otf") format("truetype"), url("/css/AvenirLTStd-Book.ttf") format("truetype"), url("/css/AvenirLTStd-Book.woff") format("woff"), url("/css/AvenirLTStd-Book.woff2") format("woff2");
 }
 
 .download {
@@ -42,14 +43,14 @@ body{
   flex-direction:row;
 }
 
-#gototop      { display:none; font-weight:bold; font-family:tahoma; font-size:10px; width:70px; background:url(/wp-content/themes/walshbook/images/add_content_spr.gif) 5px -8px no-repeat #eceff5; color:#3b5998; font-size:11px; text-decoration:none; position:fixed; right:5px; bottom:5px; padding:7px 7px 7px 20px; }
-
+#gototop {
+  position: fixed;
+  top:350px;
+}
 
 /** NAVIGATION **/
 
- nav a.active {
-      color: #face53;
-    }
+
 
 nav ul,
 footer ul {
@@ -107,7 +108,8 @@ nav.fill ul li a:after {
   background: #face53;
   height: 4px;
 }
-nav.stroke ul li a:hover:after {
+nav.stroke ul li a:hover:after,
+nav.stroke ul li a.active:after {
   width: 50%;
 }
 
@@ -141,17 +143,14 @@ transition:all 0.5s;
       padding: 0.7rem 0 0;
 }
 
-#nav li.active {background:#3C9;}
-
 /* Header */
 header {
     z-index: 1;
     width: 100%;
     padding: 10px 0;
-    background-image: url(../img/Fond-iphone.png);
+    background-image: url(../img/fond-header.png);
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: 750px;
 }
 
 /** PREMIERE SECTION **/
@@ -199,7 +198,6 @@ h1 {
   background-image: url(../img/fond-section2.png);
   background-position: top left;
   background-repeat: no-repeat;
-  background-size:100%;
 }
 
 h2 {
@@ -269,9 +267,8 @@ h3 {
 #section4 {
     background-image: url(../img/fond-section3.png);
     background-repeat: no-repeat;
-    background-size: 90%;
     background-position: top right;
-    padding-top:100px;
+    padding-top:60px;
 }
 
 #section4 img{
@@ -279,7 +276,7 @@ h3 {
 }
 
 #section4 h2{
-padding-top:60px;
+padding-top:0px;
 }
 
 /** FOOTER **/
@@ -356,6 +353,10 @@ footer input {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#email {
+      width: 235px;
 }
 
 footer ul {

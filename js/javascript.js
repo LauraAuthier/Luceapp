@@ -23,17 +23,6 @@ $(window).scroll(fixDiv);
 fixDiv();
 
 
- //GO TO TOP
-function goTop() {
-  var $cache = $('#gototop');
-  if ($(window).scrollTop() > 100)
-    $cache.css({'display': 'block'});
-  else
-    $cache.css({'display': 'none'});
-}
-$(window).scroll(goTop);
-goTop();
-
 //scrollSpy function
     function scrollSpy() {
       var sections = ['section2', 'section3', 'section4'];
