@@ -52,6 +52,11 @@ fixDiv();
     });
 
 
+    function popUp() {
+    alert("Luce n'est pas encore disponible :(");
+}
+
+
 //SCROLLSPY
 /*$(document).ready(function(){
 
